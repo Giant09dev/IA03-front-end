@@ -18,13 +18,16 @@ export default function App() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch("http://localhost:3001/user/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://ia-03-front-end.vercel.app/user/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       if (response.ok) {
         toast.success("Registration successful!"); // Success notification
