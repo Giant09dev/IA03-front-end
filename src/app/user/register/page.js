@@ -19,7 +19,7 @@ export default function App() {
   const onSubmit = async (data) => {
     try {
       const response = await fetch(
-        "https://ia-03-front-end.vercel.app/user/register",
+        `${process.env.NEXT_PUBLIC_API_URL}/user/register`,
         {
           method: "POST",
           headers: {
